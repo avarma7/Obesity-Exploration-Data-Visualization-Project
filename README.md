@@ -2,7 +2,7 @@
 
 # Question:
 How do obesity rates differ globally between countries and regionally within the United States? 
-Many claim that physical activity and diet may be related to obesity. So, do factors such as the amount of physical activity and vegetable consumption have an association with obesity rates globally and within the United States?
+Many claim that physical activity and diet may be related to obesity. So, do factors such as the amount of physical activity and vegetable consumption have an association with obesity rates globally and within the United States? Are these trends, if any, globally and regionally within the United States, consistent with each other?
 
 # Datasets:
 Obesity Rates by Country:
@@ -19,4 +19,4 @@ Link: https://catalog.data.gov/dataset/nutrition-physical-activity-and-obesity-b
 
 # Visualization Analysis
 Global Obesity Rates by Country 2023: 
-The aim of this visualization is not to quantify the obesity rates by country but to easily show the general trend of obesity rates globally through color hue and explore any patterns. Darker shades (blue) reflect high obesity rates and lighter shades (light green) reflect low obesity rates. From the map, it is easy to see that obesity rates tend to be higher in the Americas, especially the United States, the Middle East, and Oceania. We can also see that obesity rates tend to be lower in many Asian countries such as India and China, and central African countries such as Sudan. Now that we know the general pattern of how obesity rates differ between countries, we can look at factors such as physical activity and diet between these countries and compare them to this map to see if they reflect a similar/opposite pattern to the obesity rates, indicating a possible association.
+The aim of this visualization is not to quantify the obesity rates by country but to easily show the general trend of obesity rates globally through color hue and explore any patterns. Darker shades (blue) reflect high obesity rates and lighter shades (light green) reflect low obesity rates. From the map, it is easy to see that obesity rates tend to be higher in the Americas, especially the United States, the Middle East, and Oceania. We can also see that obesity rates tend to be lower in many Asian countries such as India and China, and central African countries such as Sudan. Now that we know the general pattern of how obesity rates differ between countries, we can look at factors such as physical activity and diet between these countries and compare them to this map to see if they reflect any similar/opposite pattern to the obesity rates, indicating a possible association.
