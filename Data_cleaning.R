@@ -37,6 +37,7 @@ us_rates <- us_data %>% group_by(LocationDesc) %>%
 # Florida rate was unavailable for 2021 so had to add 2020 metric
 florida_rate <- mean(us_data$Data_Value[us_data$LocationDesc == "Florida"& us_data$YearStart == "2020"& us_data$Class == "Obesity / Weight Status"])
 
+# Make us_rate compatible with the column values for the ggplot state map to left join
 colnames(us_rates)[1] <- "region"
 us_rates$region <- tolower(us_rates$region)
 us_rates <- us_rates %>% add_row(region = "florida", rate = florida_rate)
