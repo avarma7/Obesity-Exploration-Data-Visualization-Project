@@ -12,7 +12,8 @@ Vegetable Consumption by Country:
 [vegetable_data.csv](https://github.com/avarma7/Stat-451-Final-Project/files/13384677/vegetable_data.csv)
 
 Insufficient Physical Activity Rate among Adults by Country:
-[physical_activity.csv](https://github.com/avarma7/Stat-451-Final-Project/files/13384675/physical_activity.csv)
+[physical_activity.csv](https://github.com/avarma7/Stat-451-Final-Project/files/13519026/physical_activity.csv)
+
 
 United States obesity rates, vegetable consumption rates, physical activity rates by State (file too large):
 Link: https://catalog.data.gov/dataset/nutrition-physical-activity-and-obesity-behavioral-risk-factor-surveillance-system
