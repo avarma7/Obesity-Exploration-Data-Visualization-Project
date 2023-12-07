@@ -1,6 +1,8 @@
 library(leaflet)
 library(tidyverse)
 library(usmap)
+library(plotly)
+library(DT)
 
 # Load and prep data
 
@@ -103,6 +105,25 @@ function(input, output, session) {
   
   output$veg_related = renderText({"Explore if an Association Exists Between Vegetable Consumption and Obesity."})
   output$phys_related = renderText({"Explore if an Association Exists Between Physical Activity and Obesity."})
+  
+  output$countryObesityTable = renderDataTable(country_rates %>% arrange(desc(rate)),
+                                               colnames = c("Country", "Obesity Rate"),
+                                               rownames = FALSE)
+  
+  output$stateObesityTable = renderDataTable(us_rates %>% select(state, rate) %>%  
+                                               arrange(desc(rate)),
+                                               colnames = c("State", "Obesity Rate"),
+                                               rownames = FALSE)
+  
+  output$stateVegTable = renderDataTable(us_rates %>% select(state, veg_rate) %>%  
+                                               arrange(desc(veg_rate)),
+                                             colnames = c("State", "Insufficient Veg Consumption Rate"),
+                                             rownames = FALSE)
+  
+  output$statePhysTable = renderDataTable(us_rates %>% select(state, physical_rate) %>%  
+                                           arrange(desc(physical_rate)),
+                                         colnames = c("State", "Insufficient Physical Activity Rate"),
+                                         rownames = FALSE)
   
   
   output$obesity_world = renderPlot({
@@ -228,6 +249,7 @@ function(input, output, session) {
   output$physical_world = renderPlot({
     physical_world = ggplot(data = physical_region, aes(x = reorder(ParentLocation, avg), y = avg, fill = ParentLocation)) +
       geom_bar(stat = "identity") + 
+      geom_text(aes(label = round(avg, 2)), vjust = -0.4, size = 5, face = "bold") +
       labs(x = "Geographical Region",
            y = "Average % of Insufficient Physical Activity",
            title = "Average Rate of Insufficient Physical Activity Among Adults by Region",
