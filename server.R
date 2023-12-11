@@ -1,7 +1,6 @@
 library(leaflet)
 library(tidyverse)
 library(usmap)
-library(plotly)
 library(DT)
 
 # Load and prep data
@@ -110,17 +109,20 @@ function(input, output, session) {
                                                colnames = c("Country", "Obesity Rate"),
                                                rownames = FALSE)
   
-  output$stateObesityTable = renderDataTable(us_rates %>% select(state, rate) %>%  
+  output$stateObesityTable = renderDataTable(us_rates %>% select(state, rate) %>% 
+                                               mutate(across(rate, round, 3)) %>% 
                                                arrange(desc(rate)),
                                                colnames = c("State", "Obesity Rate"),
                                                rownames = FALSE)
   
-  output$stateVegTable = renderDataTable(us_rates %>% select(state, veg_rate) %>%  
+  output$stateVegTable = renderDataTable(us_rates %>% select(state, veg_rate) %>% 
+                                           mutate(across(veg_rate, round, 3)) %>% 
                                                arrange(desc(veg_rate)),
                                              colnames = c("State", "Insufficient Veg Consumption Rate"),
                                              rownames = FALSE)
   
   output$statePhysTable = renderDataTable(us_rates %>% select(state, physical_rate) %>%  
+                                            mutate(across(physical_rate, round, 3)) %>% 
                                            arrange(desc(physical_rate)),
                                          colnames = c("State", "Insufficient Physical Activity Rate"),
                                          rownames = FALSE)
