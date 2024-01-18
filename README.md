@@ -1,4 +1,4 @@
-# Stat 451 Final Project
+# Obesity Exploration Data Visualization Project
 
 # Question:
 How do obesity rates differ globally between countries and regionally within the United States? 
